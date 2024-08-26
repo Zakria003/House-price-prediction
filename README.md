@@ -22,38 +22,21 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 <h2>Project Structure</h2>
     <p>The project is organized as follows:</p>
     <ul>
-        <li><code>train.csv</code>: The dataset used for analysis.</li>
-        <li><code>eda_feature_engineering.ipynb</code>: Jupyter Notebook containing the EDA, feature engineering, and feature selection processes.</li>
-        <li><code>README.md</code>: This file.</li>
-    </ul>
+    <li><code>train.csv</code>: The original dataset used for analysis.</li>
+    <li><code>X_train_cleaned.csv</code>: The cleaned and tailored version of <code>train.csv</code>, modified for further analysis.</li>
+    <li><code>EDA.ipynb</code>: Jupyter Notebook containing the Exploratory Data Analysis (EDA) to identify key insights and preliminary findings.</li>
+    <li><code>feature_engineering_2.ipynb</code>: Jupyter Notebook detailing the feature engineering process based on conclusions drawn from <code>EDA.ipynb</code>, including data modifications and enhancements. </li>
+    <li><code>feature_selection_3.ipynb</code>: Jupyter Notebook focused on feature selection, narrowing down the number of features to improve model performance.</li>
+</ul>
 
 <h2>Exploratory Data Analysis (EDA)</h2>
+<p>The main aim of the Exploratory Data Analysis (EDA) is to gain a deeper understanding of the dataset. The analysis focuses on the following aspects:</p>
 <ol>
-    <li><strong>Missing Values:</strong>
-        <ul>
-            <li>Identified features with missing values.</li>
-            <li>Analyzed the relationship between missing values and the target variable (<code>SalePrice</code>).</li>
-            <li>Options considered: Drop or fill missing values based on their relation to <code>SalePrice</code>.</li>
-        </ul>
-    </li>
-    <li><strong>Numerical Variables:</strong>
-        <ul>
-            <li>Analyzed the distribution and types of numerical variables (continuous vs. discrete).</li>
-            <li>Analyzed temporal variables and their relation to house prices.</li>
-        </ul>
-    </li>
-    <li><strong>Categorical Variables:</strong>
-        <ul>
-            <li>Analyzed the cardinality of categorical variables.</li>
-            <li>Evaluated their relationship with <code>SalePrice</code>.</li>
-        </ul>
-    </li>
-    <li><strong>Outliers:</strong>
-        <ul>
-            <li>Identified and planned to handle outliers in continuous variables.</li>
-            <li>Checked the skewness of continuous variables and planned transformations to handle non-Gaussian distributions.</li>
-        </ul>
-    </li>
+    <li><strong>Missing Values:</strong> Identify and analyze missing values and their impact on the target variable, <code>SalePrice</code>.</li>
+    <li><strong>Numerical Variables:</strong> Separate numerical variables into continuous and discrete types, and analyze their distributions.</li>
+    <li><strong>Categorical Variables:</strong> Examine the cardinality of categorical variables and their relationship with <code>SalePrice</code>.</li>
+    <li><strong>Outliers:</strong> Identify outliers in numerical variables and assess their impact.</li>
+    <li><strong>Relationship Analysis:</strong> Explore relationships between independent variables and the dependent variable, <code>SalePrice</code>.</li>
 </ol>
 
 <h2>Feature Engineering</h2>
@@ -68,13 +51,6 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 
 <h2>Results</h2>
 <p>The analysis and feature engineering led to a refined dataset with important features selected for modeling. Detailed results and visualizations can be found in the <code>eda_feature_engineering.ipynb</code> notebook.</p>
-
-<h2>How to Use</h2>
-<ol>
-    <li>Download the dataset from <a href="https://www.kaggle.com/datasets/lespin/house-prices-dataset">Kaggle</a>.</li>
-    <li>Place <code>train.csv</code> in the project directory.</li>
-    <li>Open and run <code>eda_feature_engineering.ipynb</code> in Jupyter Notebook to replicate the analysis and feature engineering steps.</li>
-</ol>
 
 <h2>Contributing</h2>
 <p>Contributions are welcome! If you have suggestions or improvements, please open an issue or submit a pull request.</p>
