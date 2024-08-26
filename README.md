@@ -18,77 +18,73 @@ To run this project, ensure you have the required libraries installed. You can i
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
+``` <h2>Project Structure</h2>
+    <p>The project is organized as follows:</p>
+    <ul>
+        <li><code>train.csv</code>: The dataset used for analysis.</li>
+        <li><code>eda_feature_engineering.ipynb</code>: Jupyter Notebook containing the EDA, feature engineering, and feature selection processes.</li>
+        <li><code>README.md</code>: This file.</li>
+    </ul>
 
-Project Structure
-The project is organized as follows:
+    <h2>Exploratory Data Analysis (EDA)</h2>
+    <ol>
+        <li><strong>Missing Values:</strong>
+            <ul>
+                <li>Identified features with missing values.</li>
+                <li>Analyzed the relationship between missing values and the target variable (<code>SalePrice</code>).</li>
+                <li>Options considered: Drop or fill missing values based on their relation to <code>SalePrice</code>.</li>
+            </ul>
+        </li>
+        <li><strong>Numerical Variables:</strong>
+            <ul>
+                <li>Analyzed the distribution and types of numerical variables (continuous vs. discrete).</li>
+                <li>Analyzed temporal variables and their relation to house prices.</li>
+            </ul>
+        </li>
+        <li><strong>Categorical Variables:</strong>
+            <ul>
+                <li>Analyzed the cardinality of categorical variables.</li>
+                <li>Evaluated their relationship with <code>SalePrice</code>.</li>
+            </ul>
+        </li>
+        <li><strong>Outliers:</strong>
+            <ul>
+                <li>Identified and planned to handle outliers in continuous variables.</li>
+                <li>Checked the skewness of continuous variables and planned transformations to handle non-Gaussian distributions.</li>
+            </ul>
+        </li>
+    </ol>
 
-train.csv: The dataset used for analysis.
-eda_feature_engineering.ipynb: Jupyter Notebook containing the EDA, feature engineering, and feature selection processes.
-README.md: This file.
-Exploratory Data Analysis (EDA)
-Missing Values:
+    <h2>Feature Engineering</h2>
+    <ul>
+        <li><strong>Handling Missing Values:</strong> Replaced missing values with meaningful imputation based on their relationship with <code>SalePrice</code>.</li>
+        <li><strong>Temporal Features:</strong> Extracted useful features from date-related variables, such as the difference in years between the sale year and other date-related features.</li>
+        <li><strong>Transformations:</strong> Addressed skewed distributions and outliers to make the data more suitable for regression modeling.</li>
+    </ul>
 
-Identified features with missing values.
-Analyzed the relationship between missing values and the target variable (SalePrice).
-Options considered: Drop or fill missing values based on their relation to SalePrice.
-Numerical Variables:
+    <h2>Feature Selection</h2>
+    <p>Used Lasso Regression with <code>SelectFromModel</code> for feature selection to identify the most important features. The model was configured with an alpha value of 0.005 to select features with non-zero coefficients.</p>
 
-Analyzed the distribution and types of numerical variables (continuous vs. discrete).
-Analyzed temporal variables and their relation to house prices.
-Categorical Variables:
+    <h2>Results</h2>
+    <p>The analysis and feature engineering led to a refined dataset with important features selected for modeling. Detailed results and visualizations can be found in the <code>eda_feature_engineering.ipynb</code> notebook.</p>
 
-Analyzed the cardinality of categorical variables.
-Evaluated their relationship with SalePrice.
-Outliers:
+    <h2>How to Use</h2>
+    <ol>
+        <li>Download the dataset from <a href="https://www.kaggle.com/datasets/lespin/house-prices-dataset">Kaggle</a>.</li>
+        <li>Place <code>train.csv</code> in the project directory.</li>
+        <li>Open and run <code>eda_feature_engineering.ipynb</code> in Jupyter Notebook to replicate the analysis and feature engineering steps.</li>
+    </ol>
 
-Identified and planned to handle outliers in continuous variables.
-Checked the skewness of continuous variables and planned transformations to handle non-Gaussian distributions.
-Feature Engineering
-Handling Missing Values: Replaced missing values with meaningful imputation based on their relationship with SalePrice.
-Temporal Features: Extracted useful features from date-related variables, such as the difference in years between the sale year and other date-related features.
-Transformations: Addressed skewed distributions and outliers to make the data more suitable for regression modeling.
-Feature Selection
-Used Lasso Regression with SelectFromModel for feature selection to identify the most important features.
-The model was configured with an alpha value of 0.005 to select features with non-zero coefficients.
-Results
-The analysis and feature engineering led to a refined dataset with important features selected for modeling.
-Detailed results and visualizations can be found in the eda_feature_engineering.ipynb notebook.
-How to Use
-Download the dataset from Kaggle.
-Place train.csv in the project directory.
-Open and run eda_feature_engineering.ipynb in Jupyter Notebook to replicate the analysis and feature engineering steps.
-Contributing
-Contributions are welcome! If you have suggestions or improvements, please open an issue or submit a pull request.
+    <h2>Contributing</h2>
+    <p>Contributions are welcome! If you have suggestions or improvements, please open an issue or submit a pull request.</p>
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+    <h2>Acknowledgements</h2>
+    <ul>
+        <li>Dataset: <a href="https://www.kaggle.com/datasets/lespin/house-prices-dataset">House Prices Dataset</a></li>
+        <li>Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn</li>
+    </ul>
 
-Acknowledgements
-Dataset: House Prices Dataset
-Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
-Contact
-For questions or feedback, please reach out to your-email@example.com.
-
-markdown
-Copy code
-
-### Explanation of Sections:
-- **Overview:** Brief introduction to the project’s purpose.
-- **Dataset:** Information about the dataset.
-- **Libraries Used:** List of libraries required for the project.
-- **Installation:** Instructions for setting up the environment.
-- **Project Structure:** Overview of the files and their purposes.
-- **Exploratory Data Analysis (EDA):** Summary of the EDA process and findings.
-- **Feature Engineering:** Explanation of how features were engineered and transformed.
-- **Feature Selection:** Description of the feature selection process.
-- **Results:** High-level summary of the outcomes.
-- **How to Use:** Instructions for running the project.
-- **Contributing:** Guidelines for contributing to the project.
-- **License:** Licensing information.
-- **Acknowledgements:** Credits and references.
-- **Contact:** Your contact information for further inquiries.
-
-Feel free to modify or expand upon this draft as needed for your project!
-
-
-
+    <h2>Contact</h2>
+    <p>For questions or feedback, please reach out to <a href="mailto:zakriaimdad012+github@gmail.com">zakriaimdad012+github@gmail.com</a>.</p>
+</body>
+</html>
